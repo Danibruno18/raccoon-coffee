@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: #000;
+  }
+
+  :root {
+    --cor-primaria: #F5C425;
+    --cor-secundaria:#F1F734;
+    --black: #000;
+    --white: #fff;
+  }
+
+  /* INICIA ESPAÇO */
+  
+  /* FINALIZA ESPAÇO */
