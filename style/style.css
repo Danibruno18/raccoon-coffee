@@ -140,8 +140,40 @@ body {
   font-size: 24px;
   font-family: var(--fonte-secundaria);
 }
-/* FINALIZA ESPAÇO */
 
 /* INICIA ESPAÇO */
 
 /* FINALIZA ESPAÇO */
+
+/* INICIA FOOTER */
+.footer {
+  height: 60vh;
+  display: grid;
+  grid-template-rows: 2fr;
+}
+
+.footer-bottom {
+  border-top: #000 solid 1px;
+  height: 30vh;
+  display: grid;
+  grid-template-rows: 200 50;
+  justify-content: center;
+  align-items: center;
+}
+
+.sociais {
+  height: 20px;
+  gap: 5vh;
+  justify-content: center;
+  display: flex;
+
+}
+
+.sociais img {
+  height: 7vh;
+  transition: height 0.3s ease;
+}
+
+.sociais img:hover {
+  height: 8vh;
+}
