@@ -7,64 +7,153 @@
     <link
       rel="shortcut icon"
       type="imagex/ico"
-      href="./images/logo-raccoon-coffee-club.ico"/>
+      href="./images/logo-raccoon-coffee-club.ico"
+    />
     <link rel="stylesheet" href="./style/style.css" />
     <title>Raccoon Coffee Club</title>
   </head>
+
   <body>
-    <header></header>
-    <main>
-      <section class="main-container">
-        <div>
-          <div class="nav-bar">
-            <div class="container">
-              <img
-                src="./images/logo-raccoon-coffee-club.ico"
-                alt="Logo Raccoon Coffee Club"
-                class="logo"
-              />
-              <nav class="menu">
-                <a href="#">Sobre nós</a>
-                <a href="#">Cardápio</a>
-                <a href="#">Bebidas</a>
-                <a href="#">Espaços</a>
-                <a href="#">Contato</a>
-                <a href="#">Avaliações</a>
-              </nav>
-            </div>
+
+    <!-- Aqui começa o header -->
+    <header>
+        <div class="nav-bar">
+          <div class="container">
+            <img
+              src="./images/logo-raccoon-coffee-club.ico"
+              alt="Logo Raccoon Coffee Club"
+              class="logo"
+            />
+            <nav class="menu">
+              <a href="#">Sobre nós</a>
+              <a href="#">Cardápio</a>
+              <a href="#">Bebidas</a>
+              <a href="#">Espaços</a>
+              <a href="#">Contato</a>
+              <a href="#">Avaliações</a>
+            </nav>
           </div>
+        </div>
+    </header>
+    <!-- Aqui termina o header -->
+  
+    <!-- Aqui começa o hero-header -->
+    <section class="main-container">
+        
           <div class="hero-header">
             <div class="hero-image">
               <div class="container hero-text">
-                <h2>Bem-vindo ao Raccoon Coffee Club</h2>
+                <h2>Bem-vindo ao Raccoon Coffee Club!</h2>
                 <h4>O espaço destinado para o seu conforto</h4>
               </div>
             </div>
           </div>
+        </div>
+    </section>
+    <!-- Aqui termina o hero-header -->
 
-          <div class="content">
-            <img src="images/coworking.jpeg" alt="" />
-            <div class="details">
-              <span>Espaço para CoWorking</span>
+    <!-- Aqui começa o about-us -->
+    <section class="sobre-nos">
+      <div class="sobre-nos-container">
+        <button class="nav-button left" onclick="changeImage(-1)">
+          &#8592;
+        </button>
+
+        <button class="nav-button right" onclick="changeImage(1)">
+          &#8594;
+        </button>
+      </div>
+      <div class="text-about" id="text-container">
+        <div class="container">
+          <h2 id="title-text">Quem somos?</h2>
+          <p id="main-text"></p>
+        </div>
+      </div>
+    </section>
+    <!-- Aqui termina o about us -->
+
+    <!-- Aqui começa a section sobre os pratos -->
+
+    <!-- Aqui termina a section sobre os pratos -->
+
+    <!-- Aqui começa a section sobre as bebidas -->
+    <section class="bebidas-section">
+      <h2>Nossos cafés</h2>
+      
+      <div class="carousel-container">
+        <button class="carousel-button left" id="left-button" onclick="moveCarousel('left')">&#8592;</button>
+    
+        <div class="carousel">
+          
+          <div class="card">
+            <div class="card-image">
+              <img src="" alt="Bebida 1">
+            </div>
+            <div class="card-info">
+              <h3></h3>
+              <a href="#" class="ver-mais">Ver mais</a>
             </div>
           </div>
-          <div class="content">
-            <img src="images/encontro.jpeg" alt="" />
-            <div class="details">
-              <span>Lugar perfeito para reunir a galera</span>
+    
+          <div class="card">
+            <div class="card-image">
+              <img src="" alt="Bebida 2">
+            </div>
+            <div class="card-info">
+              <h3></h3>
+              <a href="#" class="ver-mais">Ver mais</a>
             </div>
           </div>
-          <div class="content">
-            <img src="images/vista.jpeg" alt="" />
-            <div class="details">
-              <span>Local prívilegiado com uma vista sensacional</span>
+    
+          <div class="card">
+            <div class="card-image">
+              <img src="" alt="Bebida 3">
+            </div>
+            <div class="card-info">
+              <h3></h3>
+              <a href="#" class="ver-mais">Ver mais</a>
+            </div>
+          </div>
+    
+          <div class="card">
+            <div class="card-image">
+              <img src="" alt="Bebida 4">
+            </div>
+            <div class="card-info">
+              <h3></h3>
+              <a href="#" class="ver-mais">Ver mais</a>
+            </div>
+          </div>
+    
+          <div class="card">
+            <div class="card-image">
+              <img src="images/cafe-gelado.jpg" alt="Bebida 5">
+            </div>
+            <div class="card-info">
+              <h3></h3>
+              <a href="#" class="ver-mais">Ver mais</a>
+            </div>
+          </div>
+    
+          <div class="card">
+            <div class="card-image">
+              <img src="images/cafe-gelatto-chantilly.jpg" alt="Bebida 6">
+            </div>
+            <div class="card-info">
+              <h3></h3>
+              <a href="#" class="ver-mais">Ver mais</a>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+    
+        <button class="carousel-button right" id="right-button" onclick="moveCarousel('right')">&#8594;</button>
+      </div>
+    </section>
+    
+    
+    <!-- Aqui termina a section sobre as bebidas -->
 
-
+    <!-- Aqui começa o footer -->
     <footer>
       <div class="footer">
         <div class="footer-top">
@@ -74,9 +163,20 @@
         </div>
         <div class="footer-bottom">
           <div class="sociais">
-            <a href="http://www.facebook.com.br"><img src="icons/facebook.svg" alt="icone da rece social facebook"></a>
-            <a href="http://www.instagram.com.br"><img src="icons/instagram.svg" alt="icone da rede social instagram"></a>
-            <img src="icons/mail.svg" alt="icone de envelope que representa o e-mail">
+            <a href="http://www.facebook.com.br"
+              ><img
+                src="icons/facebook.svg"
+                alt="icone da rece social facebook"
+            /></a>
+            <a href="http://www.instagram.com.br"
+              ><img
+                src="icons/instagram.svg"
+                alt="icone da rede social instagram"
+            /></a>
+            <img
+              src="icons/mail.svg"
+              alt="icone de envelope que representa o e-mail"
+            />
           </div>
           <div class="copyright">
             <p>&copy; Copyright. All rights reserved.</p>
@@ -84,15 +184,10 @@
         </div>
       </div>
 
+      git config --global user.email "danibrunoo18@gmail.com" git config
+      --global user.name "bruno daniel"
 
-
-
-      git config --global user.email "danibrunoo18@gmail.com"
-      git config --global user.name "bruno daniel"
-
-
-
-          <!-- <div class="logo">
+      <!-- <div class="logo">
           <img src="images/logo raccoon coffee club.jpg" alt="logo">
         </div>
         <div class="links">
@@ -127,8 +222,6 @@
         </div>
       </div> -->
     </footer>
-    <script>
-      
-    </script>
+    <script src="script/script.js"></script>
   </body>
 </html>
