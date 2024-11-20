@@ -24,10 +24,13 @@
               alt="Logo Raccoon Coffee Club"
               class="logo"
             />
+            <button class="menu-toggle" aria-label="Abrir menu">
+              &#9776;
+            </button>
             <nav class="menu">
-              <a href="#">Sobre nós</a>
+              <a href="#about-us">Sobre nós</a>
               <a href="#">Cardápio</a>
-              <a href="#">Bebidas</a>
+              <a href="#drinks">Bebidas</a>
               <a href="#">Espaços</a>
               <a href="#">Contato</a>
               <a href="#">Avaliações</a>
@@ -43,8 +46,8 @@
           <div class="hero-header">
             <div class="hero-image">
               <div class="container hero-text">
-                <h2>Bem-vindo ao Raccoon Coffee Club!</h2>
-                <h4>O espaço destinado para o seu conforto</h4>
+                <h2>Bem-vindo ao Raccoon Coffee Club</h2>
+                <h4>O espaço destinado para o seu conforto!</h4>
               </div>
             </div>
           </div>
@@ -53,7 +56,7 @@
     <!-- Aqui termina o hero-header -->
 
     <!-- Aqui começa o about-us -->
-    <section class="sobre-nos">
+    <section class="sobre-nos" id="about-us">
       <div class="sobre-nos-container">
         <button class="nav-button left" onclick="changeImage(-1)">
           &#8592;
@@ -77,7 +80,7 @@
     <!-- Aqui termina a section sobre os pratos -->
 
     <!-- Aqui começa a section sobre as bebidas -->
-    <section class="bebidas-section">
+    <section class="bebidas-section" id="drinks">
       <h2>Nossos cafés</h2>
       
       <div class="carousel-container">
@@ -223,5 +226,6 @@
       </div> -->
     </footer>
     <script src="script/script.js"></script>
+
   </body>
 </html>

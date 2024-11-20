@@ -34,6 +34,15 @@ header {
   height: 100px;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--cor-primaria);
+  cursor: pointer;
+}
+
 .hero-header,
 .main-container {
   position: relative;
@@ -63,12 +72,12 @@ header {
 }
 
 .menu a {
-  color: var(--cor-primaria);
+  color: var(--white);
   font-weight: 600;
   margin-left: 20px;
   text-decoration: none;
   font-family: var(--fonte-primaria);
-  font-size: 24px;
+  font-size: 1.8vw;
   position: relative;
   transition: color 0.4s ease;
   text-shadow: 3px 3px 6px rgba(20, 0, 0, 1);
@@ -81,7 +90,7 @@ header {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--white);
+  background-color: var(--cor-primaria);
   transition: width 0.4s ease;
 }
 
@@ -126,6 +135,7 @@ header {
   margin-bottom: 10px;
   font-family: var(--fonte-primaria);
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+  color: var(--cor-primaria);
 }
 
 .hero-text h4 {
@@ -195,14 +205,14 @@ header {
 
 .text-about h2 {
   font-family: var(--fonte-primaria);
-  font-size: 36px;
+  font-size: 2.8vw;
   margin-bottom: 35px;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .text-about p {
   font-family: var(--fonte-primaria);
-  font-size: 18px;
+  font-size: 1.3vw;
   line-height: 1.6;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
@@ -406,4 +416,226 @@ header {
 
 .sociais img:hover {
   height: 8vh;
+}
+
+@media (max-width: 860px) {
+
+  .container{
+    margin: 0px 50px;
+  }
+
+  .menu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu a {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-image {
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+  }
+  
+  .hero-text h2 {
+    font-size: 32px;
+    width: 80%;
+  }
+  
+  .hero-text h4 {
+    font-size: 18px;
+    width: 60%;
+  }
+
+  .sobre-nos {
+    height: 60vh;
+  }
+
+  .sobre-nos-container{
+    width: 60%;
+  }
+  
+  
+  .text-about h2 {
+    font-size: 2.8vw;
+  }
+  
+  .text-about p {
+    font-size: 1.6vw;
+  }
+  
+  .text-about .container {
+    margin-left: 10px;
+  }
+
+  .nav-button {
+    font-size: 18px;
+  }
+
+  .bebidas-section {
+    height: 60vh;
+  }
+  
+  .bebidas-section h2 {
+    font-size: 28px;
+  }
+  
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    width: 80%;
+  }
+  
+  .card {
+    height: 36vh;
+  }
+    
+  .card:hover .card-image img {
+    transform: scale(1.2);
+  }
+  
+  .card-info h3 {
+    font-size: 1.8vw;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .ver-mais {
+    font-size: 14px;
+  }
+  
+  .carousel-button {
+    font-size: 18px;
+  }
+  
+  .carousel-button.left {
+    left: 40px;
+  }
+  
+  .carousel-button.right {
+    right: -8px;
+  }
+  
+  .card-image:hover img {
+    transform: scale(1.5);
+  }
+ 
+}
+
+@media (max-width: 500px) {
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: var(--gradiente-nav-bar);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, right 0.4s ease;
+    z-index: 100;
+  }
+  
+  .menu a {
+    margin: 20px 0;
+    color: var(--white);
+    font-size: 1.3rem;
+    text-decoration: none;
+    justify-content: center;
+  }
+  
+  .menu.show {
+    display: flex;
+    right: 0; 
+  }
+
+  .menu-toggle {
+    display: block; 
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    cursor: pointer;
+    z-index: 110;
+  }
+  
+  .menu-toggle:focus {
+    outline: none;
+  }
+
+  .nav-bar{
+    height: 97px;
+  }
+
+  .nav-bar .logo {
+    height: 50px;
+
+  }
+
+  .container{
+    margin: 0px 30px;
+  }
+
+  .hero-image {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  
+  .hero-text h2 {
+    font-size: 48px;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text h4 {
+    font-size: 22px;
+    width: 80%;
+    line-height: 34px;
+  }
+
+  .sobre-nos {
+    flex-direction: column-reverse;
+    height: 85vh;
+  }
+
+  .sobre-nos-container {
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+  }
+
+  .text-about {
+    width: 100%;
+    padding: 10px; 
+    text-align: center;
+  }
+
+  .text-about h2 {
+    font-size: 4vw;
+  }
+
+  .text-about p {
+    font-size: 3.5vw;
+    line-height: 1.5;
+  }
+
+  .nav-button {
+    font-size: 16px;
+  }
+  
 }

@@ -42,7 +42,11 @@ function init() {
   document.getElementById("main-text").textContent = images[0].text;
 }
 
-window.onload = init;
+window.onload = () => {
+  init();
+  renderCarousel();
+  setupMenuToggle(); 
+};
 
 const bebidas = [
   {
@@ -107,3 +111,14 @@ function moveCarousel(direction) {
 }
 
 renderCarousel();
+
+function setupMenuToggle() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+
+  if (menuToggle && menu) {
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  }
+}
