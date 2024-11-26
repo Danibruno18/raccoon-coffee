@@ -52,17 +52,17 @@ const bebidas = [
   {
     src: "images/capuccino-ovomaltine.jpg",
     nome: "Capuccino Ovomaltine",
-    link: "#",
+    link: "../pages/coffees.html",
   },
   {
     src: "images/cafe-top.avif",
     nome: "Gelatto",
-    link: "#",
+    link: "../pages/coffees.html",
   },
-  { src: "images/cafe-cremoso.png", nome: "Cremosinho da Lapa", link: "#" },
-  { src: "images/cafe-frapuccino.jpg", nome: "Torra do amor", link: "#" },
-  { src: "images/cafe-gelado-chantilly.avif", nome: "Expressinho", link: "#" },
-  { src: "images/cafe-gelado.jpg", nome: "Carioquinha", link: "#" },
+  { src: "images/cafe-cremoso.png", nome: "Cremosinho da Lapa", link: "../pages/coffees.html" },
+  { src: "images/cafe-frapuccino.jpg", nome: "Torra do amor", link: "../pages/coffees.html" },
+  { src: "images/cafe-gelado-chantilly.avif", nome: "Expressinho", link: "../pages/coffees.html" },
+  { src: "images/cafe-gelado.jpg", nome: "Carioquinha", link: "../pages/coffees.html" },
 ];
 
 function renderCarousel() {

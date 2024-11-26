@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --cor-primaria: #f5c425;
+  --cor-secundaria: #f1f734;
+  --black: #000;
+  --white: #fff;
+  --fonte-primaria: "DM Sans", sans-serif;
+  --fonte-secundaria: Arial, sans-serif;
+  --gradiente-nav-bar: linear-gradient(
+    210deg,
+    rgba(0, 0, 0, 1),
+    rgba(145, 126, 98, 1),
+    rgba(0, 0, 0, 1)
+  );
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .right-container {
+    width: 30%;
+    background-color: var(--cor-primaria);
+  }
+  
+  .title {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-primaria);
+    background: var(--gradiente-nav-bar);
+    font-family: var(--fonte-primaria);
+  }
+  
+  .title h1 {
+    font-family: var(--fonte-primaria);
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .info-container {
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    background: url('../images/expresso-oriente-graos.jpg') no-repeat center/cover;
+    padding: 1rem;
+    font-size: 1.4vw;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .info-container p {
+    z-index: 2;
+    margin: 40px;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    font-family: var(--fonte-primaria);
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .info-container:hover p {
+    opacity: 1;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    background-image: linear-gradient(to right, transparent, var(--cor-primaria), transparent);
+    background-size: 100% 4px;
+    background-position: top center, bottom center; 
+    background-repeat: no-repeat;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .info-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: 0.9s ease;
+    z-index: 1;
+  }
+  
+  .info-container:hover::before {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+
+  
+  .info-container .more-info {
+    position: absolute;
+    bottom: 10%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--cor-primaria);
+    color: var(--black);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    animation: blink 5s infinite;
+    z-index: 3;
+    transition: opacity 0.3s ease;
+  }
+  
+  .info-container:hover .more-info {
+    display: none; 
+  }
+  
+  @keyframes blink {
+    0%, 50%, 100% {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0.6;
+    }
+  }
+  
+  
+  
+  
+  
+  .details-container {
+    flex-grow: 1;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .details-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .details-row strong {
+    font-weight: bold;
+  }
+  
+  .details-row img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .suggestion {
+    background-color: var(--black);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  span{
+    color: var(--cor-primaria);
+  }
+  
+  .suggestion p {
+    font-weight: bold;
+    color: var(--white);
+  }
+  
