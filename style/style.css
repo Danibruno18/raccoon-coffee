@@ -385,7 +385,14 @@ header {
 }
 
 /* FINALIZA BEBIDAS */
+/* inicia area de contato */
 
+.contato-local-grid{
+  display: grid;
+  grid-template-columns: 2, 1fr;
+}
+
+/* finaliza area de contato */
 /* Inicia avaliação */
 .card-avaliacao {
   background-color: var(--cor-primaria);
@@ -493,7 +500,14 @@ header {
 }
 /* finaliza avaliação */
 /* INICIA FOOTER */
+footer{
 
+  margin-top: 50px;
+
+  width: 100%;
+  height: 500px;
+  background-color: var(--black);
+}
 /* Finaliza footer */
 @media (max-width: 860px) {
 
