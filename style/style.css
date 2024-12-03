@@ -391,6 +391,27 @@ header {
   background-color: var(--cor-primaria);
 }
 
+.aval-card{
+  background-color: var(--cor-primaria);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 35px 40px;
+  box-shadow: 6px 6px 10px #0000003a;
+}
+
+.aval-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  max-width: 1000px;
+  margin: 0 auto;
+  grid-gap: 40px;
+}
+
+
 .aval-titulo{
   display: flex;
   justify-content: center;
@@ -400,10 +421,75 @@ header {
 
 .aval-card .user {
   width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.aval-card h3{
+  font-family: var(--fonte-primaria);
+  margin-bottom: 5px;
+}
+
+.aval-card p{
+  margin-top: 20px;
+  text-align: center;
+  font-family: var(--fonte-secundaria);
+
+  font-size: 18px;
 }
 
 .star {
   width: 20px;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+  .aval-cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .aval-titulo {
+    font-size: 30px;
+  }
+
+  .aval-card {
+    padding: 25px 30px;
+  }
+
+  .aval-card p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aval-cards {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+
+  .aval-titulo {
+    font-size: 24px;
+    margin: 3rem 0 3rem 0;
+  }
+
+  .aval-card {
+    padding: 20px;
+  }
+
+  .aval-card p {
+    font-size: 14px;
+  }
+
+  .aval-card .user {
+    width: 80px;
+    height: 80px;
+  }
+
+  .star {
+    width: 16px;
+  }
 }
 /* finaliza avaliação */
 /* INICIA FOOTER */
