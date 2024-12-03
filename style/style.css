@@ -386,38 +386,29 @@ header {
 
 /* FINALIZA BEBIDAS */
 
-/* INICIA FOOTER */
-.footer {
-  height: 60vh;
-  display: grid;
-  grid-template-rows: 2fr;
+/* Inicia avaliação */
+.card-avaliacao {
+  background-color: var(--cor-primaria);
 }
 
-.footer-bottom {
-  border-top: #000 solid 1px;
-  height: 30vh;
-  display: grid;
-  grid-template-rows: 200 50;
-  justify-content: center;
-  align-items: center;
-}
-
-.sociais {
-  height: 20px;
-  gap: 5vh;
-  justify-content: center;
+.aval-titulo{
   display: flex;
+  justify-content: center;
+  margin: 5rem 0 5rem 0;
+  font-size: 40px;
 }
 
-.sociais img {
-  height: 7vh;
-  transition: height 0.3s ease;
+.aval-card .user {
+  width: 100px;
 }
 
-.sociais img:hover {
-  height: 8vh;
+.star {
+  width: 20px;
 }
+/* finaliza avaliação */
+/* INICIA FOOTER */
 
+/* Finaliza footer */
 @media (max-width: 860px) {
 
   .container{
