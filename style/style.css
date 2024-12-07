@@ -251,6 +251,16 @@ header {
 /* FINALIZA SOBRE NÓS */
 
 /* INICIA PRATOS */
+.cardapio{
+  display: grid;
+  grid-template-columns: 4, 1fr;
+}
+
+.grid-cardapio{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
 
 .product-card {
   width: 300px;
@@ -453,12 +463,72 @@ header {
 
 /* FINALIZA BEBIDAS */
 /* inicia area de contato */
-
-.contato-local-grid{
-  display: grid;
-  grid-template-columns: 2, 1fr;
+section.contato-local {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: var(--white);
 }
 
+.contato-local-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas: contato e mapa */
+  gap: 20px;
+  align-items: stretch;
+}
+
+.contato, .local {
+  background-color: var(--cor-secundaria);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contato h2,
+.local h2 {
+  text-align: center;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input, form textarea, form button {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: rgba(145, 126, 98, 1);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: var(--cor-secundaria);
+}
+
+.endereco {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #000;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 30px;
+}
 /* finaliza area de contato */
 /* Inicia avaliação */
 .card-avaliacao {
@@ -517,7 +587,231 @@ header {
   width: 20px;
 }
 
+/* Aqui comeca o footer */
+main {
+  height: 80vh;
+}
+
+footer {
+    width: 100%;
+    color: var(--white);
+    margin-top: 3rem;
+}
+
+#footer_content {
+  background-color: rgb(55, 48, 48);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 3rem;
+}
+
+#footer_contacts h1 {
+   margin-bottom: 0.75rem;
+}
+
+#footer_contacts img {
+  width: 120px;
+  height: 120px;
+}
+
+#footer_social_media {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--cor-secundaria);
+    border-radius: 50%; 
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;
+}
+#footer_social_media .footer-link:hover {
+  opacity: 0.8;
+}
+
+#instagram {
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+  background-color: #4267b3;
+}
+
+#whatsapp {
+  background-color: #25d366;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.footer-list .footer-link {
+  color: var(--white);
+  transition: all 0.4s;
+}
+
+footer-list .footer-link:hover {
+  color: blue;
+}
+
+#footer_subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#footer_subscribe p {
+  color: rgb(255, 255, 255);
+}
+#input_group {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+}
+#input_group input {
+  all: unset;
+  padding: 0,75rem;
+  width: 100%;
+}
+
+#input_group button {
+  background-color: green;
+  border: none;
+  color: var(--cor-secundaria);
+  padding: 0px 1.25rem;
+  font-size: 1.25rem;
+  height: 100%;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+#input_group button:hover {
+  opacity: 0.8;
+}
+
 /* Media Queries para responsividade */
+
+/* Para telas menores que 860px */
+@media (max-width: 860px) {
+  .container {
+    margin: 0px 50px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu a {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-image {
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+  }
+
+  .hero-text h2 {
+    font-size: 32px;
+    width: 80%;
+  }
+
+  .hero-text h4 {
+    font-size: 18px;
+    width: 60%;
+  }
+
+  .sobre-nos {
+    height: 60vh;
+  }
+
+  .sobre-nos-container {
+    width: 60%;
+  }
+
+  .text-about h2 {
+    font-size: 2.8vw;
+  }
+
+  .text-about p {
+    font-size: 1.6vw;
+  }
+
+  .text-about .container {
+    margin-left: 10px;
+  }
+
+  .nav-button {
+    font-size: 18px;
+  }
+
+  .bebidas-section {
+    height: 60vh;
+  }
+
+  .bebidas-section h2 {
+    font-size: 28px;
+  }
+
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel {
+    width: 80%;
+  }
+
+  .card {
+    height: 36vh;
+  }
+
+  .card-info h3 {
+    font-size: 1.8vw;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .ver-mais {
+    font-size: 14px;
+  }
+
+  .carousel-button {
+    font-size: 18px;
+  }
+
+  .carousel-button.left {
+    left: 40px;
+  }
+
+  .carousel-button.right {
+    right: -8px;
+  }
+
+  .card-image:hover img {
+    transform: scale(1.5);
+  }
+}
+
+/* Para telas menores que 768px */
 @media (max-width: 768px) {
   .aval-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -535,9 +829,75 @@ header {
   .aval-card p {
     font-size: 16px;
   }
+
+  .contato-local-grid {
+    grid-template-columns: 1fr;
+  }
+
+  iframe {
+    height: 150px;
+  }
 }
 
-@media (max-width: 480px) {
+/* Para telas menores que 500px */
+@media (max-width: 500px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: var(--gradiente-nav-bar);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, right 0.4s ease;
+    z-index: 100;
+  }
+
+  .menu a {
+    margin: 20px 0;
+    color: var(--white);
+    font-size: 1.3rem;
+    text-decoration: none;
+    justify-content: center;
+  }
+
+  .menu.show {
+    display: flex;
+    right: 0; 
+  }
+
+  .menu-toggle {
+    display: block; 
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    cursor: pointer;
+    z-index: 110;
+  }
+
+  .menu-toggle:focus {
+    outline: none;
+  }
+
+  .nav-bar {
+    height: 97px;
+  }
+
+  .nav-bar .logo {
+    height: 50px;
+  }
+
+  .container {
+    margin: 0px 30px;
+  }
+
   .aval-cards {
     grid-template-columns: 1fr;
     grid-gap: 15px;
@@ -565,235 +925,33 @@ header {
     width: 16px;
   }
 }
-/* finaliza avaliação */
-/* INICIA FOOTER */
-footer{
 
-  margin-top: 50px;
-
-  width: 100%;
-  height: 500px;
-  background-color: var(--black);
-}
-/* Finaliza footer */
-@media (max-width: 860px) {
-
-  .container{
-    margin: 0px 50px;
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+  .aval-cards {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
   }
 
-  .menu{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  .aval-titulo {
+    font-size: 24px;
+    margin: 3rem 0 3rem 0;
   }
 
-  .menu a {
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .hero-image {
-    background-size: cover;
-    background-position: center;
-    height: 60vh;
-  }
-  
-  .hero-text h2 {
-    font-size: 32px;
-    width: 80%;
-  }
-  
-  .hero-text h4 {
-    font-size: 18px;
-    width: 60%;
+  .aval-card {
+    padding: 20px;
   }
 
-  .sobre-nos {
-    height: 60vh;
-  }
-
-  .sobre-nos-container{
-    width: 60%;
-  }
-  
-  
-  .text-about h2 {
-    font-size: 2.8vw;
-  }
-  
-  .text-about p {
-    font-size: 1.6vw;
-  }
-  
-  .text-about .container {
-    margin-left: 10px;
-  }
-
-  .nav-button {
-    font-size: 18px;
-  }
-
-  .bebidas-section {
-    height: 60vh;
-  }
-  
-  .bebidas-section h2 {
-    font-size: 28px;
-  }
-  
-  .carousel-container {
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .carousel {
-    width: 80%;
-  }
-  
-  .card {
-    height: 36vh;
-  }
-    
-  .card:hover .card-image img {
-    transform: scale(1.2);
-  }
-  
-  .card-info h3 {
-    font-size: 1.8vw;
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  
-  .ver-mais {
+  .aval-card p {
     font-size: 14px;
   }
-  
-  .carousel-button {
-    font-size: 18px;
-  }
-  
-  .carousel-button.left {
-    left: 40px;
-  }
-  
-  .carousel-button.right {
-    right: -8px;
-  }
-  
-  .card-image:hover img {
-    transform: scale(1.5);
-  }
- 
-}
 
-@media (max-width: 500px) {
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: var(--gradiente-nav-bar);
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    height: 100%;
-    text-align: center;
-    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s ease, right 0.4s ease;
-    z-index: 100;
-  }
-  
-  .menu a {
-    margin: 20px 0;
-    color: var(--white);
-    font-size: 1.3rem;
-    text-decoration: none;
-    justify-content: center;
-  }
-  
-  .menu.show {
-    display: flex;
-    right: 0; 
+  .aval-card .user {
+    width: 80px;
+    height: 80px;
   }
 
-  .menu-toggle {
-    display: block; 
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--cor-primaria);
-    cursor: pointer;
-    z-index: 110;
+  .star {
+    width: 16px;
   }
-  
-  .menu-toggle:focus {
-    outline: none;
-  }
-
-  .nav-bar{
-    height: 97px;
-  }
-
-  .nav-bar .logo {
-    height: 50px;
-
-  }
-
-  .container{
-    margin: 0px 30px;
-  }
-
-  .hero-image {
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-  }
-  
-  .hero-text h2 {
-    font-size: 48px;
-    width: 80%;
-    margin-bottom: 20px;
-  }
-  
-  .hero-text h4 {
-    font-size: 22px;
-    width: 80%;
-    line-height: 34px;
-  }
-
-  .sobre-nos {
-    flex-direction: column-reverse;
-    height: 85vh;
-  }
-
-  .sobre-nos-container {
-    width: 100%;
-    height: 50vh;
-    background-size: cover;
-  }
-
-  .text-about {
-    width: 100%;
-    padding: 10px; 
-    text-align: center;
-  }
-
-  .text-about h2 {
-    font-size: 4vw;
-  }
-
-  .text-about p {
-    font-size: 3.5vw;
-    line-height: 1.5;
-  }
-
-  .nav-button {
-    font-size: 16px;
-  }
-  
 }

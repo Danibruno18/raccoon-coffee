@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       rel="shortcut icon"
       type="imagex/ico"
@@ -33,7 +34,7 @@
               <a href="#drinks">Bebidas</a>
               <a href="#">Espaços</a>
               <a href="#">Contato</a>
-              <a href="#">Avaliações</a>
+              <a href="#avaliacoes">Avaliações</a>
             </nav>
           </div>
         </div>
@@ -76,18 +77,61 @@
     <!-- Aqui termina o about us -->
 
     <!-- Aqui começa a section sobre os pratos -->
-    <div class="product-card">
-      <div class="image-gallery">
-        <img src="images/cafe-capuccino-amor.jpg" alt="Produto 1 - Foto 1" class="active">
-        <img src="images/cafe-cremoso.png" alt="Produto 1 - Foto 2">
-        <img src="images/cafe-dos-namorados.jpeg" alt="Produto 1 - Foto 3">
-        <button class="prev">&lt;</button>
-        <button class="next">&gt;</button>
+    <section class="cardapio" id="cardapio">
+      <div class="grid-cardapio">
+        <div class="product-card">
+          <div class="image-gallery">
+            <img src="images/bolo-chocolate.jpg" alt="Bolo de Chocolate com Avelã - Foto 1" class="active">
+            <img src="images/bolo-chocolate-2.jpg" alt="Bolo de Chocolate com Avelã - Foto 2">
+            <img src="images/bolo-chocolate-3.jpg" alt="Bolo de Chocolate com Avelã - Foto 3">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+          </div>
+          <h3>Bolo de Chocolate com Avelã</h3>
+          <p>Um bolo de chocolate rico e úmido, coberto com um ganache de chocolate e polvilhado com avelãs crocantes. Perfeito para os amantes de chocolate!</p>
+          <p class="price">R$ 25,00</p>
+        </div>
+        
+        <div class="product-card">
+          <div class="image-gallery">
+            <img src="images/torta-limao.jpg" alt="Torta de Limão - Foto 1" class="active">
+            <img src="images/torta-limao-2.jpg" alt="Torta de Limão - Foto 2">
+            <img src="images/torta-limao-3.jpg" alt="Torta de Limão - Foto 3">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+          </div>
+          <h3>Torta de Limão</h3>
+          <p>Deliciosa torta de limão com uma crosta amanteigada, recheio cremoso de limão e cobertura de merengue leve e arejado. Uma combinação refrescante de sabores.</p>
+          <p class="price">R$ 18,00</p>
+        </div>
+        
+        <div class="product-card">
+          <div class="image-gallery">
+            <img src="images/coxinha.jpg" alt="Coxinha de Frango - Foto 1" class="active">
+            <img src="images/coxinha-2.jpg" alt="Coxinha de Frango - Foto 2">
+            <img src="images/coxinha-3.jpg" alt="Coxinha de Frango - Foto 3">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+          </div>
+          <h3>Coxinha de Frango</h3>
+          <p>Tradicional salgadinho brasileiro, recheado com frango desfiado temperado e envolto em uma massa leve e crocante. Perfeita como um lanche a qualquer hora do dia.</p>
+          <p class="price">R$ 6,00 (unidade)</p>
+        </div>
+        
+        <div class="product-card">
+          <div class="image-gallery">
+            <img src="images/brigaidero.jpg" alt="Brigadeiro Gourmet - Foto 1" class="active">
+            <img src="images/brigaidero-2.jpg" alt="Brigadeiro Gourmet - Foto 2">
+            <img src="images/brigaidero-3.jpg" alt="Brigadeiro Gourmet - Foto 3">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+          </div>
+          <h3>Brigadeiro Gourmet</h3>
+          <p>Bolinha de chocolate feita com leite condensado e coberta com granulado de chocolate belga. Uma explosão de sabor que derrete na boca, ideal para adoçar o dia!</p>
+          <p class="price">R$ 3,50 (unidade)</p>
+        </div>
       </div>
-      <h3>Produto 1</h3>
-      <p>Descrição breve do produto.</p>
-      <p class="price">R$ 10,00</p>
-    </div>
+    </section>
     <!-- Aqui termina a section sobre os pratos -->
 
     <!-- Aqui começa a section sobre as bebidas -->
@@ -171,24 +215,52 @@
 
     <section class="contato-local">
       <div class="contato-local-grid">
+        <!-- Contato -->
         <div class="contato">
-
+          <h2>Contato</h2>
+          <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+    
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+    
+            <button type="submit">Enviar</button>
+          </form>
         </div>
+    
+        <!-- Localização -->
         <div class="local">
-
+          <h2>Nosso Local</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24184.61581557782!2d-74.03918540290061!3d40.738331681828335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2596fcedfcf91%3A0xf0952161b4afbde!2sCafe%20Luna!5e0!3m2!1spt-BR!2sbr!4v1733537949359!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="200"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          
+          <p class="endereco">
+            Rua Exemplo, 123
+            Bairro Central, Cidade
+            CEP 00000-000
+          </p>
+       
         </div>
       </div>
     </section>
+    
 
     <!-- Aqui termina a section de contatos -->
 
     <!-- aqui começa a seção avaliações -->
-    <section class="avaliacoes">
+    <section class="avaliacoes" id="avaliacoes">
       <h1 class="aval-titulo">Avaliações</h1>
       
       <section class="aval-cards">
         
-
         <div class="aval-card">
           <img class="user" src="/images/user1.png" alt="foto do rosto de uma pessoa na praia">
           <h3>Bruno Daniel</h3>
@@ -288,7 +360,66 @@
      
     <!-- Aqui começa o footer -->
     <footer>
+      <div id="footer_content"> 
+        <div id="footer_contacts">
+          <img src="images/logo raccoon coffee club.jpg" alt="logo da Raccoon coffee">
 
+            <p>Redes Sociais</p>
+
+            <div id="footer_social_media">
+                <a href="http://instagram.com" class="footer-link" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="http://facebook.com.br" class="footer-link" id="facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                 <a href="https://wa.me/55 51995445855" class="footer-link" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+                <h3>Menus</h3>
+            </li>
+            <li>
+                <a href="#about-us" class="footer-link">Sobre Nós</a>
+            </li>
+            <li>
+              <a href="#comidas" class="footer-link">Cardápio</a>
+            </li>
+            <li>
+              <a href="#drinks" class="footer-link">Bebidas</a>
+            </li>
+            <li>
+              <a href="#espacos" class="footer-link">Espaços</a>
+            </li>
+            <li>
+              <a href="#contato" class="footer-link">Contato</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Avaliações</a>
+            </li>
+          </ul>
+
+        <div id="footer_subscriber">
+          <h3>NewsLetter</h3>
+          <p>
+            Inscreva-se para receber as últimas notícias e promoções!
+          </p>
+
+          <div id="input_group">
+              <input type="email" id="email">
+              <button>
+                <i class="fa-regular fa-envelope"></i>
+              </button>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="script/script.js"></script>
 
