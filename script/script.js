@@ -45,7 +45,7 @@ function init() {
 window.onload = () => {
   init();
   renderCarousel();
-  setupMenuToggle(); 
+  setupMenuToggle();
 };
 
 const bebidas = [
@@ -55,21 +55,40 @@ const bebidas = [
     link: "../pages/coffees.html",
   },
   {
-    src: "images/cafe-top.avif",
+    src: "images/cafe-gelado.jpg",
     nome: "Gelatto",
     link: "../pages/coffees.html",
   },
-  { src: "images/cafe-cremoso.png", nome: "Cremosinho da Lapa", link: "../pages/coffees.html" },
-  { src: "images/cafe-frapuccino.jpg", nome: "Torra do amor", link: "../pages/coffees.html" },
-  { src: "images/cafe-gelado-chantilly.avif", nome: "Expressinho", link: "../pages/coffees.html" },
-  { src: "images/cafe-gelado.jpg", nome: "Carioquinha", link: "../pages/coffees.html" },
+  {
+    src: "images/cafe-cremoso.png",
+    nome: "Raccoon Cremoso",
+    link: "../pages/coffees.html",
+  },
+  {
+    src: "images/cafe-frapuccino.jpg",
+    nome: "Expresso das Neves",
+    link: "../pages/coffees.html",
+  },
+  {
+    src: "images/cafe-gelado-chantilly.avif",
+    nome: "Raccoon Pingado",
+    link: "../pages/coffees.html",
+  },
+  {
+    src: "images/cafe-gelatto-chantilly.jpg",
+    nome: "Branca de Neve",
+    link: "../pages/coffees.html",
+  },
 ];
 
 function renderCarousel() {
   const carouselContainer = document.querySelector(".carousel");
   carouselContainer.innerHTML = "";
 
-  for (let i = currentIndex; i < currentIndex + 3; i++) {
+  const isSmallScreen = window.innerWidth < 500; // Verifica se a tela é menor que 500px
+  const numberOfCards = isSmallScreen ? 1 : 3; // Exibe 1 item se a tela for pequena, caso contrário 3
+
+  for (let i = currentIndex; i < currentIndex + numberOfCards; i++) {
     const bebida = bebidas[i % bebidas.length];
 
     const card = document.createElement("div");
@@ -101,10 +120,14 @@ function renderCarousel() {
 }
 
 function moveCarousel(direction) {
+  const isSmallScreen = window.innerWidth < 600; // Verifica a largura da tela para ajustar o comportamento
+  const numberOfCards = isSmallScreen ? 1 : 3; // Ajusta o número de cards a serem movidos
+
   if (direction === "left") {
-    currentIndex = (currentIndex - 3 + bebidas.length) % bebidas.length;
+    currentIndex =
+      (currentIndex - numberOfCards + bebidas.length) % bebidas.length;
   } else if (direction === "right") {
-    currentIndex = (currentIndex + 3) % bebidas.length;
+    currentIndex = (currentIndex + numberOfCards) % bebidas.length;
   }
 
   renderCarousel();
@@ -113,12 +136,12 @@ function moveCarousel(direction) {
 renderCarousel();
 
 function setupMenuToggle() {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu');
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu");
 
   if (menuToggle && menu) {
-    menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("show");
     });
   }
 }
