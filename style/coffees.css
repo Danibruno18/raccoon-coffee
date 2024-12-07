@@ -26,176 +26,180 @@ body {
 }
 
 .container {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .left-container {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .right-container {
-    width: 30%;
-    background-color: var(--cor-primaria);
-  }
-  
-  .title {
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--cor-primaria);
-    background: var(--gradiente-nav-bar);
-    font-family: var(--fonte-primaria);
-    position: relative;
-  }
+  display: flex;
+  height: 100vh;
+}
 
-  .title h1 {
-    font-family: var(--fonte-primaria);
-    font-size: 2.9rem;
-    text-align: center;
-    width: 50%;
-    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.5), 
-        -2px -2px 4px rgba(0, 0, 0, 0.5);
-    margin-left: 30px;
-  }
-  
-  .title img {
-    position: absolute;
-    left: 133px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 70px;
-    box-shadow: 0px 0px 4px 4px rgb(245, 234, 234);
-  }
-    
-  .info-container {
-    height: 65vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--white);
-    background: url('../images/expresso-oriente-graos.jpg') no-repeat center/cover;
-    padding: 1rem;
-    font-size: 1.4vw;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid var(--black);;
-  }
-  
-  .info-container p {
-    z-index: 2;
-    margin: 40px;
-    opacity: 0;
-    transition: opacity 0.9s ease;
-    font-family: var(--fonte-primaria);
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  
-  .info-container:hover p {
+.left-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-container {
+  width: 30%;
+  background-color: var(--cor-primaria);
+}
+
+.title {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--cor-primaria);
+  background: var(--gradiente-nav-bar);
+  font-family: var(--fonte-primaria);
+  position: relative;
+}
+
+.title h1 {
+  font-family: var(--fonte-primaria);
+  font-size: 2.9rem;
+  text-align: center;
+  width: 50%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(0, 0, 0, 0.5);
+  margin-left: 30px;
+}
+
+.title img {
+  position: absolute;
+  left: 133px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70px;
+  box-shadow: 0px 0px 4px 4px rgb(245, 234, 234);
+}
+
+.info-container {
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  background: url("../images/expresso-oriente-graos.jpg") no-repeat center/cover;
+  padding: 1rem;
+  font-size: 1.4vw;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--black);
+}
+
+.info-container p {
+  z-index: 2;
+  margin: 40px;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  font-family: var(--fonte-primaria);
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.info-container:hover p {
+  opacity: 1;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--cor-primaria),
+    transparent
+  );
+  background-size: 100% 4px;
+  background-position: top center, bottom center;
+  background-repeat: no-repeat;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.info-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transition: 0.9s ease;
+  z-index: 1;
+}
+
+.info-container:hover::before {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.info-container .more-info {
+  position: absolute;
+  bottom: 10%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--cor-primaria);
+  color: var(--black);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  animation: blink 5s infinite;
+  z-index: 3;
+  transition: opacity 0.3s ease;
+}
+
+.info-container:hover .more-info {
+  display: none;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
     opacity: 1;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    background-image: linear-gradient(to right, transparent, var(--cor-primaria), transparent);
-    background-size: 100% 4px;
-    background-position: top center, bottom center; 
-    background-repeat: no-repeat;
-    padding-top: 15px;
-    padding-bottom: 15px;
   }
-  
-  .info-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    transition: 0.9s ease;
-    z-index: 1;
+  25%,
+  75% {
+    opacity: 0.6;
   }
-  
-  .info-container:hover::before {
-    background: rgba(0, 0, 0, 0.6);
-  }
-  
+}
 
+.details-container {
+  flex-grow: 1;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .info-container .more-info {
-    position: absolute;
-    bottom: 10%;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: var(--cor-primaria);
-    color: var(--black);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    animation: blink 5s infinite;
-    z-index: 3;
-    transition: opacity 0.3s ease;
-  }
-  
-  .info-container:hover .more-info {
-    display: none; 
-  }
-  
-  @keyframes blink {
-    0%, 50%, 100% {
-      opacity: 1;
-    }
-    25%, 75% {
-      opacity: 0.6;
-    }
-  }
-  
-  .details-container {
-    flex-grow: 1;
-    background-color: #f8f8f8;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .details-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    gap: 0.5rem;
-  }
-  
-  .details-row strong {
-    font-weight: bold;
-  }
-  
-  .details-row img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .suggestion {
-    background-color: var(--black);
-    padding: 1rem;
-    text-align: center;
-    border-radius: 5px;
-  }
+.details-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
 
-  span{
-    color: var(--cor-primaria);
-  }
-  
-  .suggestion p {
-    font-weight: bold;
-    color: var(--white);
-  }
+.details-row strong {
+  font-weight: bold;
+}
+
+.details-row img {
+  width: 20px;
+  height: 20px;
+}
+
+.suggestion {
+  background-color: var(--black);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+span {
+  color: var(--cor-primaria);
+}
+
+.suggestion p {
+  font-weight: bold;
+  color: var(--white);
+}
 
 .right-container {
   width: 30%;
@@ -237,11 +241,11 @@ body {
   width: 30px;
   height: 30px;
   margin-bottom: 8px;
-  background-color: var(--white); 
+  background-color: var(--white);
   padding: 8px;
-  border-radius: 50%; 
+  border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  box-sizing: content-box; 
+  box-sizing: content-box;
 }
 
 .arrow {
@@ -303,4 +307,179 @@ body {
 
 .text-container.visible {
   opacity: 1;
+}
+
+.text-container {
+  overflow: auto;
+  max-height: 60vh;
+  scrollbar-color: yellow transparent;
+  scrollbar-width: thin;
+}
+
+.text-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.text-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.text-container::-webkit-scrollbar-thumb {
+  background-color: yellow;
+  border-radius: 10px;
+}
+
+@media (max-width: 860px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-container {
+    width: 100%;
+  }
+
+  .right-container {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .title {
+    height: 80px;
+  }
+
+  .title h1 {
+    font-size: 2.2rem;
+    width: 60%;
+  }
+
+  .title img {
+    height: 50px;
+    left: 100px;
+  }
+
+  .info-container {
+    height: 60vh;
+    font-size: 1.5vw;
+  }
+
+  .info-container p {
+    margin: 30px;
+    font-size: 16px;
+  }
+
+  .details-container {
+    padding: 1rem;
+  }
+
+  .details-row {
+    gap: 0.3rem;
+  }
+
+  .details-row img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .suggestion {
+    padding: 0.8rem;
+    font-size: 14px;
+  }
+
+  .raccoon-btn {
+    font-size: 0.9rem;
+    padding: 6px;
+    width: 70%;
+  }
+
+  .raccoon-btn img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .text-container {
+    font-size: 0.9rem;
+    padding: 15px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-container {
+    width: 100%;
+  }
+
+  .right-container {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .title {
+    height: 60px;
+  }
+
+  .title h1 {
+    font-size: 20px;
+    width: 70%;
+  }
+
+  .title img {
+    height: 40px;
+    left: 50px;
+  }
+
+  .info-container {
+    height: 50vh;
+    font-size: 12px;
+  }
+
+  .info-container p {
+    margin: 20px;
+    font-size: 8px;
+  }
+
+  .details-container {
+    padding: 0.8rem;
+  }
+
+  .details-row {
+    gap: 0.2rem;
+  }
+
+  .details-row img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .suggestion {
+    padding: 0.6rem;
+    font-size: 10px;
+  }
+
+  .raccoon-btn {
+    font-size: 0.8rem;
+    padding: 5px;
+    width: 60%;
+  }
+
+  .raccoon-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .text-container {
+    font-size: 0.8rem;
+    padding: 10px;
+    width: 90%;
+  }
+
+  .more-info {
+    width: 50%;
+    font-size: 12px;
+  }
 }
