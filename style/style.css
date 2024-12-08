@@ -251,15 +251,30 @@ header {
 /* FINALIZA SOBRE NÓS */
 
 /* INICIA PRATOS */
+
 .cardapio{
-  display: grid;
-  grid-template-columns: 4, 1fr;
+margin-bottom: 50px;
+margin-top: 50px;
+}
+
+.cardapio h1 {
+  font-family: var(--fonte-primaria);
+  font-size: 36px;
+  margin-bottom: 35px;
+  color: var(--cor-secundaria);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.title-pratos{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .grid-cardapio{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
+  justify-items: center;
 }
 
 .product-card {
