@@ -143,3 +143,31 @@ function setupMenuToggle() {
     });
   }
 }
+
+
+// script do pular a imagem do card pratos
+document.querySelectorAll('.image-gallery').forEach(gallery => {
+  const images = gallery.querySelectorAll('img');
+  const prevButton = gallery.querySelector('.prev');
+  const nextButton = gallery.querySelector('.next');
+  let currentIndex = 0;
+
+  // Atualiza
+  const updateGallery = () => {
+    images.forEach((img, index) => {
+      img.classList.toggle('active', index === currentIndex);
+    });
+  };
+
+  // Voltar
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateGallery();
+  });
+
+  // Pular
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateGallery();
+  });
+});

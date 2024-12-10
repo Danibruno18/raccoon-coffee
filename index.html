@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       rel="shortcut icon"
       type="imagex/ico"
@@ -33,7 +34,7 @@
               <a href="#drinks">Bebidas</a>
               <a href="#">Espaços</a>
               <a href="#">Contato</a>
-              <a href="#">Avaliações</a>
+              <a href="#avaliacoes">Avaliações</a>
             </nav>
           </div>
         </div>
@@ -76,7 +77,62 @@
     <!-- Aqui termina o about us -->
 
     <!-- Aqui começa a section sobre os pratos -->
-
+    <section class="cardapio" id="cardapio">
+      <h1 class="title-pratos">Pratos</h1>
+      <div class="grid-cardapio">
+        <div class="product-card">
+          <div class="image-gallery">
+            <img src="images/bolo_avela1.jpg" alt="Bolo de Chocolate com Avelã - Foto 1" class="active">
+            <img src="images/bolo_avela2.jpg" alt="Bolo de Chocolate com Avelã - Foto 2">
+            <img src="images/bolo_avela3.jpg" alt="Bolo de Chocolate com Avelã - Foto 3">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+          </div>
+          <h3>Bolo de Chocolate com Avelã</h3>
+          <p>Um bolo de chocolate rico e úmido, coberto com um ganache de chocolate e polvilhado com avelãs crocantes. Perfeito para os amantes de chocolate!</p>
+          <p class="price">R$ 25,00</p>
+        </div>
+        
+        <div class="product-card">
+          <div class="image-gallery">
+            <img src="images/torta_limao1.jpg" alt="Torta de Limão - Foto 1" class="active">
+            <img src="images/torta_limao2.jpg" alt="Torta de Limão - Foto 2">
+            <img src="images/torta_limao3.jpg" alt="Torta de Limão - Foto 3">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+          </div>
+          <h3>Torta de Limão</h3>
+          <p>Deliciosa torta de limão com uma crosta amanteigada, recheio cremoso de limão e cobertura de merengue leve e arejado. Uma combinação refrescante de sabores.</p>
+          <p class="price">R$ 18,00</p>
+        </div>
+        
+        <div class="product-card">
+          <div class="image-gallery">
+            <img src="images/coxinha1.jpg" alt="Coxinha de Frango - Foto 1" class="active">
+            <img src="images/coxinha2.jpg" alt="Coxinha de Frango - Foto 2">
+            <img src="images/coxinha3.jpg" alt="Coxinha de Frango - Foto 3">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+          </div>
+          <h3>Coxinha de Frango</h3>
+          <p>Tradicional salgadinho brasileiro, recheado com frango desfiado temperado e envolto em uma massa leve e crocante. Perfeita como um lanche a qualquer hora do dia.</p>
+          <p class="price">R$ 6,00 (unidade)</p>
+        </div>
+        
+        <div class="product-card">
+          <div class="image-gallery">
+            <img src="images/brigadeiro1.jpg" alt="Brigadeiro Gourmet - Foto 1" class="active">
+            <img src="images/brigadeiro2.jpg" alt="Brigadeiro Gourmet - Foto 2">
+            <img src="images/brigadeiro3.jpg" alt="Brigadeiro Gourmet - Foto 3">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+          </div>
+          <h3>Brigadeiro Gourmet</h3>
+          <p>Bolinha de chocolate feita com leite condensado e coberta com granulado de chocolate belga. Uma explosão de sabor que derrete na boca, ideal para adoçar o dia!</p>
+          <p class="price">R$ 3,50 (unidade)</p>
+        </div>
+      </div>
+    </section>
     <!-- Aqui termina a section sobre os pratos -->
 
     <!-- Aqui começa a section sobre as bebidas -->
@@ -155,129 +211,210 @@
     
     
     <!-- Aqui termina a section sobre as bebidas -->
-    
-    <!-- Aqui começa a section de contatos -->
-    <section class="contato-local">
-      <div class="contato-local-grid">
-        <div class="contato">
-
+    <!-- Aqui começa nosso espaço -->
+    <section class="nosso-espaco">
+      <h1>Nossos Espaços</h1>
+      <div class="grid-espaco">
+        <div class="imagem-espaco">
+          <img src="images/coworking.jpeg" alt="area de coworking da cafeteria">
+          <div class="descricao-imagem">
+            <h1>Perfeito para CoWorking</h1>
+            <p>Espaço produtivo com estações ergonômicas, Wi-Fi rápido e salas privativas.</p>
+          </div>
         </div>
-        <div class="local">
-
+        <div class="imagem-espaco">
+          <img src="images/vista.jpeg" alt="foto mostrando o conforto da cafeteria">
+          <div class="descricao-imagem">
+            <h1>Vista Privilegiada</h1>
+            <p>Grandes janelas com cenários deslumbrantes e luz natural inspiradora</p>
+          </div>
+        </div>
+        <div class="imagem-espaco">
+          <img src="images/encontro.jpeg" alt="foto representando um lugar bom pra encontrar os amigos e familia">
+          <div class="descricao-imagem">
+            <h1>Perfeito para Encontros</h1>
+            <p>O local perfeito para conversas memoráveis em uma atmosfera intimista.</p>
+          </div>
         </div>
       </div>
     </section>
+    <!-- Aqui termina nosso espaço -->
+    <!-- Aqui começa a section de contatos -->
 
+    <section class="contato-local">
+      <div class="contato-local-grid">
+        <!-- Contato -->
+        <div class="contato">
+          <h2>Contato</h2>
+          <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+    
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+    
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+    
+        <!-- Localização -->
+        <div class="local">
+          <h2>Nosso Local</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24184.61581557782!2d-74.03918540290061!3d40.738331681828335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2596fcedfcf91%3A0xf0952161b4afbde!2sCafe%20Luna!5e0!3m2!1spt-BR!2sbr!4v1733537949359!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="200"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          
+          <p class="endereco">
+            Rua Exemplo, 123
+            Bairro Central, Cidade
+            CEP 00000-000
+          </p>
+       
+        </div>
+      </div>
+    </section>
+    
 
     <!-- Aqui termina a section de contatos -->
 
     <!-- aqui começa a seção avaliações -->
-    <section class="avaliacoes">
+    <section class="avaliacoes" id="avaliacoes">
       <h1 class="aval-titulo">Avaliações</h1>
       
-      <section class="aval-cards">
+      <div class="aval-cards">
         
-
         <div class="aval-card">
-          <img class="user" src="/images/user1.png" alt="foto do rosto de uma pessoa na praia">
+          <img class="user" src="images/user1.png" alt="foto do rosto de uma pessoa na praia">
           <h3>Bruno Daniel</h3>
 
-          <div class="stars">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-          </div>
+          <div class="stars"></div>
 
           <p>Eu amei o Raccoon Coffee Club! O café é maravilhoso, os bolos são incríveis, e o lugar tem um clima super aconchegante. Já quero voltar amanhã! 🦝☕</p>
 
         </div>
 
         <div class="aval-card">
-          <img class="user" src="/images/user2.jpeg" alt="cachorro de chapéu">
+          <img class="user" src="images/user2.jpeg" alt="cachorro de chapéu">
           <h3>Roger</h3>
 
-          <div class="stars">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-          </div>
+          <div class="stars"></div>
 
           <p>O Raccoon Coffee Club é simplesmente perfeito! O café é delicioso, o bolo parece feito em casa, e o ambiente é tão gostoso que dá vontade de passar o dia todo lá.</p>
 
         </div>
 
         <div class="aval-card">
-          <img class="user" src="/images/user3.png" alt="menino de chapeu do gremio em frente ao estadio de futebol">
+          <img class="user" src="images/user3.png" alt="menino de chapeu do gremio em frente ao estadio de futebol">
           <h3>Caio Daniel</h3>
 
-          <div class="stars">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-          </div>
+          <div class="stars"></div>
 
           <p>Que vibe incrível tem o Raccoon Coffee Club! O café é top, os bolos são de outro mundo, e ainda dá pra relaxar naquele clima descontraído. Totalmente apaixonado!</p>
 
         </div>
 
         <div class="aval-card">
-          <img class="user" src="/images/user3.png" alt="menino de chapeu do gremio em frente ao estadio de futebol">
-          <h3>Caio Daniel</h3>
+          <img class="user" src="images/user4.jpg" alt="menino de chapeu do gremio em frente ao estadio de futebol">
+          <h3>Gabriel Toledo</h3>
 
-          <div class="stars">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-          </div>
+          <div class="stars"></div>
 
-          <p>O café é top, os bolos então nem se fala, e eles ainda tem um site incrivel que com certeza merece uma nota A. Mutio massa!!</p>
+          <p>O café é top, os bolos então nem se fala, e eles ainda tem um site incrivel que com certeza merece uma nota A. Muito massa!!</p>
 
         </div>
 
         <div class="aval-card">
-          <img class="user" src="/images/user3.png" alt="menino de chapeu do gremio em frente ao estadio de futebol">
-          <h3>Caio Daniel</h3>
+          <img class="user" src="images/user5.jpg" alt="menino de chapeu do gremio em frente ao estadio de futebol">
+          <h3>Fernando Alvarenga</h3>
 
-          <div class="stars">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-          </div>
+          <div class="stars"></div>
 
           <p>Simplesmente incrível! O Raccoon Coffee Club ganhou meu coração com o café perfeito, os bolos deliciosos e o ambiente super acolhedor. Com certeza vou voltar!</p>
 
         </div>
 
         <div class="aval-card">
-          <img class="user" src="/images/user4.png" alt="escrever">
-          <h3>Caio Daniel</h3>
+          <img class="user" src="images/user6.jpg" alt="escrever">
+          <h3>Lincoln Lau</h3>
 
-          <div class="stars">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-            <img class ="star" src="/images/estrela.png" alt="estrela">
-          </div>
+          <div class="stars"></div>
 
           <p>O Raccoon Coffee Club tem potencial, mas acho que o café podia ser um pouco mais quente e os bolos mais fresquinhos. Ainda assim, o ambiente é bem agradável!!</p>
 
         </div>
-      </section>
+      </div>
     </section>
     <!-- aqui termina a seção avaliações -->
      
     <!-- Aqui começa o footer -->
     <footer>
+      <div id="footer_content"> 
+        <div id="footer_contacts">
+          <a href="index.html">
+            <img src="images/logo raccoon coffee club.jpg" alt="logo da Raccoon coffee">
+          </a>
+            <p>Redes Sociais</p>
 
+            <div id="footer_social_media">
+                <a href="http://instagram.com" class="footer-link" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="http://facebook.com.br" class="footer-link" id="facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                 <a href="https://wa.me/55 51995445855" class="footer-link" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+                <h3>Menus</h3>
+            </li>
+            <li>
+                <a href="#about-us" class="footer-link">Sobre Nós</a>
+            </li>
+            <li>
+              <a href="#comidas" class="footer-link">Cardápio</a>
+            </li>
+            <li>
+              <a href="#drinks" class="footer-link">Bebidas</a>
+            </li>
+            <li>
+              <a href="#espacos" class="footer-link">Espaços</a>
+            </li>
+            <li>
+              <a href="#contato" class="footer-link">Contato</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Avaliações</a>
+            </li>
+          </ul>
+
+        <div id="footer_subscriber">
+          <h3>NewsLetter</h3>
+          <p>
+            Inscreva-se para receber as últimas notícias e promoções!
+          </p>
+
+          <div id="input_group">
+              <input type="email" id="email">
+              <button>
+                <i class="fa-regular fa-envelope"></i>
+              </button>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="script/script.js"></script>
 
