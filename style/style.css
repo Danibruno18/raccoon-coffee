@@ -480,36 +480,6 @@ margin-top: 50px;
 /* FINALIZA BEBIDAS */
 /* INICIA NOSSO ESPAÇO */
 
-.image-text-section {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px;
-}
-
-.text-area {
-  flex: 1;
-  font-size: 18px;
-}
-
-.image-area {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.image-area img {
-  width: 100px;
-  height: auto;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-.image-area img:hover {
-  border-color: #007bff;
-}
-
 /* FINALIZA NOSSO ESPAÇO */
 /* inicia area de contato */
 section.contato-local {

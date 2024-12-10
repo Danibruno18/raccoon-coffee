@@ -148,22 +148,4 @@ document.querySelectorAll('.image-gallery').forEach(gallery => {
     currentIndex = (currentIndex + 1) % images.length;
     updateGallery();
   });
-  
 });
-
-function updateDescription(image) {
-  const descriptionElement = document.getElementById("image-description");
-  const newDescription = image.getAttribute("data-description");
-  descriptionElement.textContent = newDescription;
-}
-
-function openInitialImage() {
-  const initialImage = document.querySelector(".image-area img"); // Seleciona a primeira imagem
-  if (initialImage) {
-    updateDescription(initialImage); // Atualiza a descrição com a descrição da primeira imagem
-  }
-}
-
-window.onload = openInitialImage;
-
-
