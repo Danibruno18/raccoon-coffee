@@ -274,6 +274,7 @@ margin-top: 50px;
 .grid-cardapio{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   justify-items: center;
 }
 
@@ -477,6 +478,39 @@ margin-top: 50px;
 }
 
 /* FINALIZA BEBIDAS */
+/* INICIA NOSSO ESPAÇO */
+
+.image-text-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.text-area {
+  flex: 1;
+  font-size: 18px;
+}
+
+.image-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-area img {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.image-area img:hover {
+  border-color: #007bff;
+}
+
+/* FINALIZA NOSSO ESPAÇO */
 /* inicia area de contato */
 section.contato-local {
   margin-top: 40px;
@@ -602,6 +636,14 @@ form button:hover {
   width: 20px;
 }
 
+.stars{
+    width: 100px; /* Ajuste conforme necessário */
+    height: 20px; /* Altura da imagem */
+    background-image: url('../images/estrela.png');
+    background-repeat: repeat-x; /* Repete horizontalmente */
+    background-size: 20px 20px; /* Tamanho da imagem */
+}
+
 /* Aqui comeca o footer */
 main {
   height: 80vh;
@@ -719,6 +761,16 @@ footer-list .footer-link:hover {
 }
 
 /* Media Queries para responsividade */
+
+@media (max-width: 1024px) {
+  .grid-cardapio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-card {
+    width: 90%;
+  }
+}
 
 /* Para telas menores que 860px */
 @media (max-width: 860px) {
@@ -852,6 +904,19 @@ footer-list .footer-link:hover {
   iframe {
     height: 150px;
   }
+
+  .grid-cardapio {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cardapio h1 {
+    font-size: 28px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
 }
 
 /* Para telas menores que 500px */
@@ -968,5 +1033,25 @@ footer-list .footer-link:hover {
 
   .star {
     width: 16px;
+  }
+
+  .image-gallery {
+    height: 150px;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
+
+  .product-card p {
+    font-size: 0.9rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .image-gallery button {
+    padding: 0.3rem;
   }
 }
