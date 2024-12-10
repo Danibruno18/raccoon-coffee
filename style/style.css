@@ -670,11 +670,11 @@ form button:hover {
 }
 
 .stars{
-    width: 100px; /* Ajuste conforme necessário */
-    height: 20px; /* Altura da imagem */
+    width: 100px;
+    height: 20px;
     background-image: url('../images/estrela.png');
-    background-repeat: repeat-x; /* Repete horizontalmente */
-    background-size: 20px 20px; /* Tamanho da imagem */
+    background-repeat: repeat-x;
+    background-size: 20px 20px;
 }
 
 /* Aqui comeca o footer */
@@ -805,7 +805,7 @@ footer-list .footer-link:hover {
   }
 
   .grid-espaco {
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+    grid-template-columns: repeat(2, 1fr);
   }
   
 }
@@ -920,7 +920,7 @@ footer-list .footer-link:hover {
 @media (max-width: 768px) {
 
   .grid-espaco {
-    grid-template-columns: 1fr; /* 1 coluna para celulares */
+    grid-template-columns: 1fr;
   }
 
   .aval-cards {
@@ -1099,21 +1099,21 @@ footer-list .footer-link:hover {
   }
 
   .nosso-espaco h1 {
-    font-size: 28px; /* Reduz o tamanho do título */
+    font-size: 28px;
   }
 
   .imagem-espaco {
-    width: 100%; /* Remove a largura fixa */
+    width: 100%;
     position: relative;
   }
 
   .imagem-espaco img {
-    width: 100%; /* Ajusta a imagem para 100% da largura do container */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 100%;
+    height: auto;
   }
 
   .descricao-imagem {
-    width: 100%; /* Ajusta a descrição para 100% da largura */
+    width: 100%; 
     top: 0;
     left: 0;
     position: absolute;
@@ -1127,17 +1127,17 @@ footer-list .footer-link:hover {
   }
 
   .descricao-imagem:hover {
-    opacity: 1; /* Mostra a descrição ao passar o mouse */
+    opacity: 1;
   }
 
   .descricao-imagem h1 {
-    font-size: 20px; /* Reduz o tamanho do título da descrição */
+    font-size: 20px;
     color: var(--cor-primaria);
     margin-bottom: 10px; /* Ajusta a margem */
   }
 
   .descricao-imagem p {
-    font-size: 14px; /* Reduz o tamanho do texto da descrição */
+    font-size: 14px;
     color: var(--cor-secundaria);
     text-align: center;
   }
