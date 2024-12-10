@@ -85,8 +85,8 @@ function renderCarousel() {
   const carouselContainer = document.querySelector(".carousel");
   carouselContainer.innerHTML = "";
 
-  const isSmallScreen = window.innerWidth < 500; // Verifica se a tela é menor que 500px
-  const numberOfCards = isSmallScreen ? 1 : 3; // Exibe 1 item se a tela for pequena, caso contrário 3
+  const isSmallScreen = window.innerWidth < 500;
+  const numberOfCards = isSmallScreen ? 1 : 3;
 
   for (let i = currentIndex; i < currentIndex + numberOfCards; i++) {
     const bebida = bebidas[i % bebidas.length];
@@ -120,8 +120,8 @@ function renderCarousel() {
 }
 
 function moveCarousel(direction) {
-  const isSmallScreen = window.innerWidth < 600; // Verifica a largura da tela para ajustar o comportamento
-  const numberOfCards = isSmallScreen ? 1 : 3; // Ajusta o número de cards a serem movidos
+  const isSmallScreen = window.innerWidth < 600;
+  const numberOfCards = isSmallScreen ? 1 : 3;
 
   if (direction === "left") {
     currentIndex =
@@ -132,8 +132,6 @@ function moveCarousel(direction) {
 
   renderCarousel();
 }
-
-renderCarousel();
 
 function setupMenuToggle() {
   const menuToggle = document.querySelector(".menu-toggle");
