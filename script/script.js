@@ -130,20 +130,20 @@ document.querySelectorAll('.image-gallery').forEach(gallery => {
   const nextButton = gallery.querySelector('.next');
   let currentIndex = 0;
 
-  // Atualiza a galeria para exibir a imagem
+  // Atualiza
   const updateGallery = () => {
     images.forEach((img, index) => {
       img.classList.toggle('active', index === currentIndex);
     });
   };
 
-  // clique no botão "Voltar"
+  // Voltar
   prevButton.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateGallery();
   });
 
-  // clique no botão "Avançar"
+  // Pular
   nextButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % images.length;
     updateGallery();
