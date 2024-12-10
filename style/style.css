@@ -480,6 +480,69 @@ margin-top: 50px;
 /* FINALIZA BEBIDAS */
 /* INICIA NOSSO ESPAÇO */
 
+.nosso-espaco h1 {
+  font-family: var(--fonte-primaria);
+  font-size: 36px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  color: var(--cor-secundaria);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.grid-espaco{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.imagem-espaco{
+  width: 500px;
+  position: relative;
+}
+
+.imagem-espaco img{
+  width: 500px;
+  height: 500px;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}
+
+.descricao-imagem{
+  width: 500px;
+  height: 100%;
+  top:0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.descricao-imagem:hover{
+  opacity: 1;
+}
+
+.descricao-imagem h1{
+  font-size: 35px;
+  color: var(--cor-primaria);
+  margin-bottom: 20px;
+}
+
+.descricao-imagem p{
+  font-size: 20px;
+  color: var(--cor-secundaria);
+  text-align: center;
+}
+
+
+
 /* FINALIZA NOSSO ESPAÇO */
 /* inicia area de contato */
 section.contato-local {
@@ -490,7 +553,7 @@ section.contato-local {
 
 .contato-local-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Duas colunas: contato e mapa */
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: stretch;
 }
@@ -740,6 +803,11 @@ footer-list .footer-link:hover {
   .product-card {
     width: 90%;
   }
+
+  .grid-espaco {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+  }
+  
 }
 
 /* Para telas menores que 860px */
@@ -850,6 +918,11 @@ footer-list .footer-link:hover {
 
 /* Para telas menores que 768px */
 @media (max-width: 768px) {
+
+  .grid-espaco {
+    grid-template-columns: 1fr; /* 1 coluna para celulares */
+  }
+
   .aval-cards {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
@@ -1023,5 +1096,49 @@ footer-list .footer-link:hover {
 
   .image-gallery button {
     padding: 0.3rem;
+  }
+
+  .nosso-espaco h1 {
+    font-size: 28px; /* Reduz o tamanho do título */
+  }
+
+  .imagem-espaco {
+    width: 100%; /* Remove a largura fixa */
+    position: relative;
+  }
+
+  .imagem-espaco img {
+    width: 100%; /* Ajusta a imagem para 100% da largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .descricao-imagem {
+    width: 100%; /* Ajusta a descrição para 100% da largura */
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.6s;
+  }
+
+  .descricao-imagem:hover {
+    opacity: 1; /* Mostra a descrição ao passar o mouse */
+  }
+
+  .descricao-imagem h1 {
+    font-size: 20px; /* Reduz o tamanho do título da descrição */
+    color: var(--cor-primaria);
+    margin-bottom: 10px; /* Ajusta a margem */
+  }
+
+  .descricao-imagem p {
+    font-size: 14px; /* Reduz o tamanho do texto da descrição */
+    color: var(--cor-secundaria);
+    text-align: center;
   }
 }
