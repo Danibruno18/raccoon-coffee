@@ -30,10 +30,10 @@
             </button>
             <nav class="menu">
               <a href="#about-us">Sobre nós</a>
-              <a href="#">Cardápio</a>
+              <a href="#cardapio">Cardápio</a>
               <a href="#drinks">Bebidas</a>
-              <a href="#">Espaços</a>
-              <a href="#">Contato</a>
+              <a href="#espaco">Espaços</a>
+              <a href="#contato">Contato</a>
               <a href="#avaliacoes">Avaliações</a>
             </nav>
           </div>
@@ -212,7 +212,7 @@
     
     <!-- Aqui termina a section sobre as bebidas -->
     <!-- Aqui começa nosso espaço -->
-    <section class="nosso-espaco">
+    <section class="nosso-espaco" id="espaco">
       <h1>Nossos Espaços</h1>
       <div class="grid-espaco">
         <div class="imagem-espaco">
@@ -241,7 +241,7 @@
     <!-- Aqui termina nosso espaço -->
     <!-- Aqui começa a section de contatos -->
 
-    <section class="contato-local">
+    <section class="contato-local" id="contato">
       <div class="contato-local-grid">
         <!-- Contato -->
         <div class="contato">
@@ -249,11 +249,17 @@
           <form>
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required />
+
+            <label for="fone">Telefone:</label>
+            <input type="tel" id="fone" name="fone" placeholder="Digite seu telefone" required />
     
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
     
-            <button type="submit">Enviar</button>
+            <button type="submit" class="contato-btn">Enviar</button>
           </form>
         </div>
     
@@ -263,7 +269,7 @@
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24184.61581557782!2d-74.03918540290061!3d40.738331681828335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2596fcedfcf91%3A0xf0952161b4afbde!2sCafe%20Luna!5e0!3m2!1spt-BR!2sbr!4v1733537949359!5m2!1spt-BR!2sbr"
             width="100%"
-            height="200"
+            height="400"
             style="border:0;"
             allowfullscreen=""
             loading="lazy"
@@ -279,8 +285,6 @@
         </div>
       </div>
     </section>
-    
-
     <!-- Aqui termina a section de contatos -->
 
     <!-- aqui começa a seção avaliações -->
@@ -332,9 +336,7 @@
         <div class="aval-card">
           <img class="user" src="images/user5.jpg" alt="menino de chapeu do gremio em frente ao estadio de futebol">
           <h3>Fernando Alvarenga</h3>
-
           <div class="stars"></div>
-
           <p>Simplesmente incrível! O Raccoon Coffee Club ganhou meu coração com o café perfeito, os bolos deliciosos e o ambiente super acolhedor. Com certeza vou voltar!</p>
 
         </div>
@@ -385,21 +387,22 @@
                 <a href="#about-us" class="footer-link">Sobre Nós</a>
             </li>
             <li>
-              <a href="#comidas" class="footer-link">Cardápio</a>
+              <a href="#cardapio" class="footer-link">Cardápio</a>
             </li>
             <li>
               <a href="#drinks" class="footer-link">Bebidas</a>
             </li>
             <li>
-              <a href="#espacos" class="footer-link">Espaços</a>
+              <a href="#espaco" class="footer-link">Espaços</a>
             </li>
             <li>
               <a href="#contato" class="footer-link">Contato</a>
             </li>
             <li>
-              <a href="#" class="footer-link">Avaliações</a>
+              <a href="#avaliacoes" class="footer-link">Avaliações</a>
             </li>
           </ul>
+
 
         <div id="footer_subscriber">
           <h3>NewsLetter</h3>
