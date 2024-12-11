@@ -715,10 +715,18 @@ footer {
 }
 
 #footer_content {
-  background-color: rgb(55, 48, 48);
+  background-color: rgb(34, 29, 29);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 3rem;
+
+}
+
+#footer_contacts{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #footer_contacts h1 {
@@ -771,6 +779,9 @@ footer {
   flex-direction: column;
   gap: 0.75rem;
   list-style: none;
+  width: 33%;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-list .footer-link {
@@ -783,10 +794,14 @@ footer-list .footer-link:hover {
 }
 
 
-#footer_subscribe {
+#footer_subscriber {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+ 
 }
 
 /* finaliza avaliação */
@@ -830,6 +845,58 @@ footer {
 
 .contato-btn:hover{
   background-color: var(--black);
+}
+
+@media (max-width: 1024px) {
+  #footer_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  #footer_contacts,
+  .footer-list,
+  #footer_subscriber {
+    flex: none;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  #footer_social_media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  #footer_social_media a {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s; 
+  }
+  
+  #footer_social_media a:hover {
+    color: #555; 
+  }
+
+  #footer_subscriber h3, p{
+    margin-bottom: 15px;
+  }
+
+  .grid-cardapio{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .product-card{
+    width: 90%;
+  }
+
+  .grid-espaco{
+    grid-template-columns: (2, 1fr);
+  }
+  
 }
 
 /* Para telas menores que 860px */
@@ -954,6 +1021,44 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  #footer_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  #footer_contacts,
+  .footer-list,
+  #footer_subscriber {
+    flex: none;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  #footer_social_media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  #footer_social_media a {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s; 
+  }
+  
+  #footer_social_media a:hover {
+    color: #555; 
+  }
+
+  #footer_subscriber h3, p{
+    margin-bottom: 15px;
+  }
+  
+
 }
 
 /* Para telas menores que 768px */
@@ -1000,6 +1105,44 @@ footer {
   .product-card {
     width: 300px;
   }
+
+  #footer_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  #footer_contacts,
+  .footer-list,
+  #footer_subscriber {
+    flex: none;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  #footer_social_media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  #footer_social_media a {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s; 
+  }
+  
+  #footer_social_media a:hover {
+    color: #555; 
+  }
+
+  #footer_subscriber h3, p{
+    margin-bottom: 15px;
+  }
+  
 }
 
 @media (max-width: 660px) {
